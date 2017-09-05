@@ -11,7 +11,7 @@ public class Question1 {
         numPyramid = input.nextInt();
 
         for(int i = 1; i <= numPyramid;i++){
-            
+
         }
 
     }
