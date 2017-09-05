@@ -16,7 +16,7 @@ public class Question1 {
             for (int j = i-1; j >= 1; j--){
                 layer = layer + " " + j;
             }
-            System.out.println(String.format("%50s",layer));
+            System.out.printf("%50s\n",layer);
 
             layer = "";
 
