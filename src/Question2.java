@@ -19,10 +19,7 @@ public class Question2 {
         }
 
         printCalender(month,year,firstDay,isLeapYear);
-
-
-
-
+        
     }
     public static void printCalender(int month, int year, String day, boolean leapYear){
         switch (month){
