@@ -30,52 +30,52 @@ public class Question2 {
                 System.out.println("Month is an invalid");
                 return;
             case 1:
-                System.out.println("January " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "January " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 2:
-                System.out.println("February " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "February " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 3:
-                System.out.println("March " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "March " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 4:
-                System.out.println("April " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "April " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 5:
-                System.out.println("May " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "May " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 6:
-                System.out.println("June " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "June " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 7:
-                System.out.println("July " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "July " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 8:
-                System.out.println("August " + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "August " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 9:
-                System.out.printf("\n","September" + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "September " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 10:
-                System.out.printf("\n","October" + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "October " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 11:
-                System.out.printf("\n","November" + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "November " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 12:
-                System.out.printf("\n","December" + year);
-                System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+                System.out.printf("%" + 25 + "s\n", "December " + year);
+                System.out.printf("%3s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
         }
         printCalender((month + 1), year, day, leapYear);
