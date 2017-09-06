@@ -16,10 +16,8 @@ public class Question1 {
             for (int j = i-1; j >= 1; j--){
                 layer = layer + " " + j;
             }
-            System.out.printf("%" + (numPyramid - (i + 1)) + "s" + '\n',layer);
-
+            System.out.println(layer);
             layer = "";
-
         }
 
     }
