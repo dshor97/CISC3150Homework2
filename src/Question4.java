@@ -8,7 +8,7 @@ public class Question4 {
                     System.out.println("The number is " + (i + j) + ". Breaking out of the inner loop.");
                     break;
                 }else if((i + j) % 10 == 0){
-                    System.out.println("The number is " + (i + j) + ". Breaking out of outer loop");
+                    System.out.println("The number is " + (i + j) + ". Breaking out of outer loop.");
                     break outerFor;
                 }
             }
