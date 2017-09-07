@@ -1,3 +1,5 @@
+import com.sun.org.apache.bcel.internal.classfile.SourceFile;
+
 import java.util.Scanner;
 
 public class Question2 {
@@ -77,5 +79,8 @@ public class Question2 {
         }
         printCalender((month + 1), year, day, leapYear);
 
+    }
+    public static void printMonth(int month, String day, boolean isLeapYear){
+        
     }
 }
