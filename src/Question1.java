@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Question1 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int numPyramid;
         String layer = new String("");
 
@@ -9,17 +9,16 @@ public class Question1 {
         System.out.print("How many layers do you want: ");
         numPyramid = input.nextInt();
 
-        for(int i = 1; i <= numPyramid; i++){
-            for(int k = 1; k<= i; k++){
-                 layer = layer + " " + k;
+        for (int i = 1; i <= numPyramid; i++) {
+            for (int k = 1; k <= i; k++) {
+                layer = layer + k;
 
             }
-            for (int j = i-1; j >= 1; j--) {
-                layer = layer + " " + j;
+            for (int j = i - 1; j >= 1; j--) {
+                layer = layer + j;
 
             }
-            layer.replace(" ","");
-            System.out.printf("%"+ ((numPyramid - (2*i)) + layer.length()) + "s\n",layer);
+            System.out.printf("%" + ((numPyramid - i) + layer.length()) + "s\n", layer);
             layer = "";
         }
     }
