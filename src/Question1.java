@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Question1 {
     public static void main(String[] args){
         int numPyramid;
-        String layer = new String("");
+        String layer = new String(" ");
 
         Scanner input = new Scanner(System.in);
         System.out.print("How many layers do you want: ");
@@ -19,7 +19,7 @@ public class Question1 {
 
             //System.out.println(layer.length());
             System.out.printf("%"+ ((numPyramid - i) + layer.length()) + "s\n",layer);
-            layer = "";
+            layer = " ";
         }
 
     }
