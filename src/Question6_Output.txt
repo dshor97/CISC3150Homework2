@@ -1,19 +1,16 @@
-Enter a string to tokenize: This is a test.
+Enter a string to tokenize: Token String
 
 T
-h
-i
-s
-
-i
-s
-
-a
-
-t
+o
+k
 e
-s
+n
+
+S
 t
-.
+r
+i
+n
+g
 
 Process finished with exit code 0

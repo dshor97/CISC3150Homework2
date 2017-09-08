@@ -10,8 +10,10 @@ public class Question6 {
         input = new Scanner(test).useDelimiter(""); // To tokenize every character use a empty string as a delimiter
 
         System.out.println();
+
         while(input.hasNext()){
             System.out.println(input.next());
         }
     }
 }
+
