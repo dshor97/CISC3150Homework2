@@ -1,10 +1,10 @@
-the code :
+The second loop of the program is :
             int y = 2098234;
                     for(int i=0;i<35;i++){
                         System.out.printf("%d\t\t%32s\n",i,Integer.toBinaryString(y));
                         y = y >>> i;
                     }
-produces the output :
+This loop produces the output :
 
             0		          1000000000010000111010
             1		          1000000000010000111010
@@ -44,4 +44,8 @@ produces the output :
 
 This happens because through every loop you assign the value y >>> i  to y. This causes y to have a different value
 through each iteration of the loop, and eventually have the value of 0. Once that happens you keep shifting the bits of
-0 which stays as 0.
+0 which stays as 0. As for the results of the first loop oracle's java manual says that before a bitwise shift is made
+the amount of shifts are moded by 32 so that the only shifts can be done are 0 to 31 inclusive. This can be found in
+section 15.19 in the following link:
+
+http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.19
