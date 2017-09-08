@@ -23,7 +23,7 @@ public class Question2 {
         printCalender(month,year,firstDay,isLeapYear);
 
     }
-    public static void printCalender(int month, int year, String day, boolean leapYear){
+    public static void printCalender(int month, int year, String day, boolean isleapYear){
         switch (month){
             default:
                 System.out.println("Month is an invalid");
@@ -78,10 +78,11 @@ public class Question2 {
                 break;
         }
         System.out.println();
-        printCalender((month + 1), year, day, leapYear);
+        printCalender((month + 1), year, day, isleapYear);
 
     }
     public static void printMonth(int month, String day, boolean isLeapYear){
+
 
     }
 }
