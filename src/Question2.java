@@ -19,6 +19,7 @@ public class Question2 {
             isLeapYear = true;
         }
 
+        System.out.println();
         printCalender(month,year,firstDay,isLeapYear);
 
     }
