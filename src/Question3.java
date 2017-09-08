@@ -30,8 +30,6 @@ public class Question3 {
         }else{
             System.out.println("The word is not a palindrome.");
         }
-        System.out.println();
-
 
 
 

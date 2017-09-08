@@ -1,0 +1,6 @@
+Check if this word is a palindrome: racecar
+The word is a palindrome.
+Check if this word is a palindrome: testing
+The word is not a palindrome.
+
+Process finished with exit code 0
