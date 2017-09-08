@@ -1,0 +1,19 @@
+Enter a string to tokenize: This is a test.
+
+T
+h
+i
+s
+
+i
+s
+
+a
+
+t
+e
+s
+t
+.
+
+Process finished with exit code 0
