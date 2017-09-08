@@ -1,0 +1,12 @@
+Enter some text separated by commas: This,is,a,test,of,a,new,delimiter,
+
+This
+is
+a
+test
+of
+a
+new
+delimiter
+
+Process finished with exit code 0
