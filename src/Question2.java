@@ -24,6 +24,7 @@ public class Question2 {
 
     }
     public static void printCalender(int month, int year, String day, boolean isleapYear){
+        String nextDay;
         switch (month){
             default:
                 System.out.println("Month is an invalid");
@@ -31,58 +32,278 @@ public class Question2 {
             case 1:
                 System.out.printf("%" + 20 + "s\n", "January " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 2:
                 System.out.printf("%" + 20 + "s\n", "February " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 3:
                 System.out.printf("%" + 18 + "s\n", "March " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 4:
                 System.out.printf("%" + 18 + "s\n", "April " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 5:
                 System.out.printf("%" + 17 + "s\n", "May " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 6:
                 System.out.printf("%" + 17 + "s\n", "June " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 7:
                 System.out.printf("%" + 18 + "s\n", "July " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 8:
                 System.out.printf("%" + 18 + "s\n", "August " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 9:
                 System.out.printf("%" + 19 + "s\n", "September " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 10:
                 System.out.printf("%" + 20 + "s\n", "October " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 11:
                 System.out.printf("%" + 20 + "s\n", "November " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
             case 12:
                 System.out.printf("%" + 20 + "s\n", "December " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+                nextDay = printMonth(month,day,isleapYear);
                 break;
         }
         System.out.println();
-        printCalender((month + 1), year, day, isleapYear);
+        printCalender((month + 1), year, nextDay, isleapYear);
 
     }
-    public static void printMonth(int month, String day, boolean isLeapYear){
+    public static String printMonth(int month, String day, boolean isLeapYear){
+        int dayNum = dayNumber(day);
 
+        if(month == 2){
+            if(isLeapYear) {
+                switch (dayNum) {
+                    default:
+                        System.out.println("Invalid month");
+                        break;
+                    case 1:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "1", "2", "3", "4", "5", "6", "7");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "8", "9", "10", "11", "12", "13", "14");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "15", "16", "17", "18", "19", "20", "21");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "22", "23", "24", "25", "26", "27", "28");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "29", "", "", "", "", "", "");
+                        return "Sunday";
+                        break;
+                    case 2:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "1", "2", "3", "4", "5", "6");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "7", "8", "9", "10", "11", "12", "13");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "14", "15", "16", "17", "18", "19", "20");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "21", "22", "23", "24", "25", "26", "27");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "28", "29", "", "", "", "", "");
+                        return "Monday";
+                        break;
+                    case 3:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "1", "2", "3", "4", "5");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "6", "7", "8", "9", "10", "11", "12");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "13", "14", "15", "16", "17", "18", "19");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "20", "21", "22", "23", "24", "25", "26");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "27", "28", "29", "", "", "", "");
+                        return "Tuesday";
+                        break;
+                    case 4:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "1", "2", "3", "4");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "5", "6", "7", "8", "9", "10", "11");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "12", "13", "14", "15", "16", "17", "18");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "19", "20", "21", "22", "23", "24", "25");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "26", "27", "28", "29", "", "", "");
+                        return "Wednesday";
+                        break;
+                    case 5:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "1", "2", "3");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "4", "5", "6", "7", "8", "9", "10");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "11", "12", "13", "14", "15", "16", "17");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "18", "19", "20", "21", "22", "23", "24");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "25", "26", "27", "28", "29", "", "");
+                        return "Thursday";
+                        break;
+                    case 6:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "1", "2");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "3", "4", "5", "6", "7", "8", "9");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "10", "11", "12", "13", "14", "15", "16");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "17", "18", "19", "20", "21", "22", "23");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "24", "25", "26", "27", "28", "29", "");
+                        return "Friday";
+                        break;
+                    case 7:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "1");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "2", "3", "4", "5", "6", "7", "8");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "9", "10", "11", "12", "13", "14", "15");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "16", "17", "18", "19", "20", "21", "22");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "23", "24", "25", "26", "27", "28", "29");
+                        return "Saturday";
+                        break;
+                }
+            }else{
+                switch (dayNum) {
+                    default:
+                        System.out.println("Invalid month");
+                        break;
+                    case 1:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "1", "2", "3", "4", "5", "6", "7");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "8", "9", "10", "11", "12", "13", "14");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "15", "16", "17", "18", "19", "20", "21");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "22", "23", "24", "25", "26", "27", "28");
+                        return "Saturday";
+                    break;
+                    case 2:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "1", "2", "3", "4", "5", "6");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "7", "8", "9", "10", "11", "12", "13");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "14", "15", "16", "17", "18", "19", "20");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "21", "22", "23", "24", "25", "26", "27");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "28", "", "", "", "", "", "");
+                        return "Sunday";
+                    break;
+                    case 3:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "1", "2", "3", "4", "5");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "6", "7", "8", "9", "10", "11", "12");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "13", "14", "15", "16", "17", "18", "19");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "20", "21", "22", "23", "24", "25", "26");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "27", "28", "", "", "", "", "");
+                        return "Monday";
+                    break;
+                    case 4:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "1", "2", "3", "4");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "5", "6", "7", "8", "9", "10", "11");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "12", "13", "14", "15", "16", "17", "18");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "19", "20", "21", "22", "23", "24", "25");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "26", "27", "28", "", "", "", "");
+                        return "Tuesday";
+                    break;
+                    case 5:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        return "Wednesday";
+                    break;
+                    case 6:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        return "Thursday";
+                    break;
+                    case 7:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        return "Friday";
+                    break;
+                }
+        }else {
+            if (has31Days(month)) {
+                switch (dayNum) {
+                    default:
+                        System.out.println("Invalid month");
+                        break;
+                    case 1:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 2:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 3:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 4:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 5:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 6:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 7:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                }
+            } else {
+                switch (dayNum) {
+                    default:
+                        System.out.println("Invalid month");
+                        break;
+                    case 1:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 2:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 3:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 4:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 5:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 6:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                    case 7:
+                        System.out.printf("%4%4%4%4%4%4%4s\n", "", "", "", "", "", "", "");
+                        break;
+                }
+            }
 
+        }
+    }
+    public static boolean has31Days(int month){
+        if(month == 1 ||  month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
+            return true;
+        }
+        else return false;
+    }
+
+    public static int dayNumber(String day){
+        day.toLowerCase();
+        if(day.equals("monday")){
+            return 2;
+        }else if(day.equals("tuesday")){
+            return 3;
+        }else if(day.equals("wednesday")){
+            return 4;
+        }else if(day.equals("thursday")){
+            return 5;
+        }else if(day.equals("friday")){
+            return 6;
+        }else if(day.equals("saturday")){
+            return 7;
+        }else if(day.equals("sunday")){
+            return 1;
+        }
+        return 0;
     }
 }
