@@ -1,20 +1,17 @@
 public class Question4 {
     public static void main(String[] args){
 
-        outFor:
-        for(int i = 1; i <= 100; i++){
-            for(int j = 0; j <= 300; j++){
-                if((i + j) % 5 == 2) {
-                    System.out.println("The number is " + (i + j) + ". Breaking out of the inner loop.");
-                    break;
-                }else if((i + j) % 10 == 0){
-                    System.out.println("The number is " + (i + j) + ". Breaking out of outer loop.");
-                    break outFor;
-                }
-                else{
-                    System.out.println("The number is " + (i + j) + ". Staying in the loop.");
-                }
-            }
+        int x = 2098234;
+        for(int i=0;i<35;i++){
+            System.out.printf("%d\t\t%32s\n",i,Integer.toBinaryString(x>>>(i*2)));
+        }
+
+        System.out.println();
+
+        int y = 2098234;
+        for(int i=0;i<35;i++){
+            System.out.printf("%d\t\t%32s\n",i,Integer.toBinaryString(y));
+            y = y >>> i;
         }
     }
 }

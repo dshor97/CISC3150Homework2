@@ -1,0 +1,47 @@
+the code :
+            int y = 2098234;
+                    for(int i=0;i<35;i++){
+                        System.out.printf("%d\t\t%32s\n",i,Integer.toBinaryString(y));
+                        y = y >>> i;
+                    }
+produces the output :
+
+            0		          1000000000010000111010
+            1		          1000000000010000111010
+            2		           100000000001000011101
+            3		             1000000000010000111
+            4		                1000000000010000
+            5		                    100000000001
+            6		                         1000000
+            7		                               1
+            8		                               0
+            9		                               0
+            10		                               0
+            11		                               0
+            12		                               0
+            13		                               0
+            14		                               0
+            15		                               0
+            16		                               0
+            17		                               0
+            18		                               0
+            19		                               0
+            20		                               0
+            21		                               0
+            22		                               0
+            23		                               0
+            24		                               0
+            25		                               0
+            26		                               0
+            27		                               0
+            28		                               0
+            29		                               0
+            30		                               0
+            31		                               0
+            32		                               0
+            33		                               0
+            34		                               0
+
+This happens because through every loop you assign the value y >>> i  to y. This causes y to have a different value
+through each iteration of the loop, and eventually have the value of 0. Once that happens you keep shifting the bits of
+0 which stays as 0.
