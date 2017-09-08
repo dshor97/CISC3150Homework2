@@ -29,54 +29,55 @@ public class Question2 {
                 System.out.println("Month is an invalid");
                 return;
             case 1:
-                System.out.printf("%" + 25 + "s\n", "January " + year);
+                System.out.printf("%" + 20 + "s\n", "January " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 2:
-                System.out.printf("%" + 25 + "s\n", "February " + year);
+                System.out.printf("%" + 20 + "s\n", "February " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 3:
-                System.out.printf("%" + 25 + "s\n", "March " + year);
+                System.out.printf("%" + 18 + "s\n", "March " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 4:
-                System.out.printf("%" + 25 + "s\n", "April " + year);
+                System.out.printf("%" + 18 + "s\n", "April " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 5:
-                System.out.printf("%" + 25 + "s\n", "May " + year);
+                System.out.printf("%" + 17 + "s\n", "May " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 6:
-                System.out.printf("%" + 25 + "s\n", "June " + year);
+                System.out.printf("%" + 17 + "s\n", "June " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 7:
-                System.out.printf("%" + 25 + "s\n", "July " + year);
+                System.out.printf("%" + 18 + "s\n", "July " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 8:
-                System.out.printf("%" + 25 + "s\n", "August " + year);
+                System.out.printf("%" + 18 + "s\n", "August " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 9:
-                System.out.printf("%" + 25 + "s\n", "September " + year);
+                System.out.printf("%" + 19 + "s\n", "September " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 10:
-                System.out.printf("%" + 25 + "s\n", "October " + year);
+                System.out.printf("%" + 20 + "s\n", "October " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 11:
-                System.out.printf("%" + 25 + "s\n", "November " + year);
+                System.out.printf("%" + 20 + "s\n", "November " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
             case 12:
-                System.out.printf("%" + 25 + "s\n", "December " + year);
+                System.out.printf("%" + 20 + "s\n", "December " + year);
                 System.out.printf("%4s%4s%4s%4s%4s%4s%4s\n", "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
                 break;
         }
+        System.out.println();
         printCalender((month + 1), year, day, leapYear);
 
     }
