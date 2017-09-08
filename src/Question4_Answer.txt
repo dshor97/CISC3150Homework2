@@ -44,8 +44,8 @@ This loop produces the output :
 
 This happens because through every loop you assign the value y >>> i  to y. This causes y to have a different value
 through each iteration of the loop, and eventually have the value of 0. Once that happens you keep shifting the bits of
-0 which stays as 0. As for the results of the first loop oracle's java manual says that before a bitwise shift is made
-the amount of shifts are moded by 32 so that the only shifts can be done are 0 to 31 inclusive. This can be found in
+0 which stays as 0. As for the results of the first loop oracle's java manual says that when shifting an int uses only
+the last five ordered bits making the range of shifts that can be done are 0 to 31 inclusive. This can be found in
 section 15.19 in the following link:
 
 http://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.19
