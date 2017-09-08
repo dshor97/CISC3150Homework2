@@ -11,6 +11,9 @@ public class Question4 {
                     System.out.println("The number is " + (i + j) + ". Breaking out of outer loop.");
                     break outFor;
                 }
+                else{
+                    System.out.println("The number is " + (i + j) + ". Staying in the loop.");
+                }
             }
         }
     }
